@@ -7,8 +7,8 @@ let db = null;
 
 export const initMongoDB = async () => {
     try {
-        console.log(chalk.blue('🔄 Conectando a la base de datos...'));
 
+        console.log(chalk.blue(`🔄 Conectando a la base de datos en ${config.MONGODB_URI}...`));
         const mongoClient = new MongoClient(config.MONGODB_URI);
         await mongoClient.connect();
 
